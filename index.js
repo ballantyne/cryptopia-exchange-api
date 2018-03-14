@@ -5,6 +5,11 @@ var Private       = require(path.join(__dirname, 'lib', 'private'));
 var api = {};
 
 module.exports = klass(function(options) {
+  if (options == undefined) {
+    options = {};
+  }
+  
+  
   if (options.verbose == undefined) {
     this.verbose = options.verbose;
   } else {
